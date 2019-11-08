@@ -1,0 +1,96 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+html,
+body {
+    background: rgba(255, 255, 255, 0);
+    font-size: 10px;
+}
+svg.eye-svg {
+    width: 100%;
+}
+svg.eye-svg #eye-clip-path-1 path {
+    transition: -webkit-transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+svg.eye-svg.blink #eye-clip-path-1 path {
+    -webkit-animation: blink 0.25s ease-in-out;
+    animation: blink 0.25s ease-in-out;
+}
+svg.eye-svg * {
+    pointer-events: none;
+}
+svg.eye-svg:active #eye-clip-path-1 path {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
+.pupil-group,
+.highlight {
+    transition: -webkit-transform .05s ease-out;
+    transition: transform .05s ease-out;
+    transition: transform .05s ease-out, -webkit-transform .05s ease-out;
+}
+.white-eye-background,
+.highlight {
+    fill: #EFEAE4;
+}
+.iris {
+    fill: #eb3e25;
+    transition: fill .1s ease-in-out;
+}
+.iris.red {
+    fill: #eb3e25;
+}
+.iris.blue {
+    fill: #349ad1;
+}
+.iris.green {
+    fill: #01a673;
+}
+.iris.yellow {
+    fill: #fdc80a;
+}
+.pupil {
+    fill: #001c34;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    transition: -webkit-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+    pointer-events: none;
+}
+@-webkit-keyframes blink {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    50% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes blink {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    50% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}

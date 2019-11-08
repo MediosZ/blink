@@ -1,0 +1,25 @@
+{
+  "name": "blink",
+  "productName": "blink",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./src/main.js",
+  "version": "1.0.0",
+  "author": "tricster",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "club.mediosz.club",
+    "win": {  
+      "icon": "./eye.png"
+    }  
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "6.0.0-beta.15",
+    "electron-builder": "^22.1.0"
+  }
+}
